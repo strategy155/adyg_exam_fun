@@ -21,6 +21,6 @@ with open('sql.txt', 'w') as fo:
         wordform = without_vars.split('{')[0]
         for lemma in dif_lemmas:
             fo.write('INSERT INTO rus_words (id, wordform, lemma)' + '\n')
-            fo.write('VALUES (' + str(diff) + ', ' + wordform + ', ' + lemma + ')' + '\n')
+            fo.write('VALUES ("' + str(diff) + '", "' + wordform + '", "' + lemma + '");' + '\n')
             diff+=1
         diff-=1
