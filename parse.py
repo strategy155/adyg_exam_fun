@@ -12,3 +12,6 @@ for elem in html_words:
     if elem in adyg_words:
         adyg_set.add(elem)
 words_met = list(adyg_set)
+with open('wordlist.txt', 'w') as fo:
+    for elem in words_met:
+        fo.write(elem+ '\n')
